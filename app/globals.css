@@ -1,42 +1,99 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #ffffff;
+  --black: #000000;
+
+  /* gray */
+  --gray-50: #fbfbfb; 
+  --gray-100: #fbfefe;
+  --gray-200: #f2f2f2;
+  --gray-300: #eae0d3;
+  --gray-400: #d6c8b0;
+  --gray-450: #d9d9d9;
+  --gray-500: #b2b2b2;
+  --gray-600: #7f7f7f;
+  --gray-700: #4b4b4b;
+  --gray-900: #2f373b;
+
+  /* blue / cyan */
+  --cyan-100: #e5fafe;
+  --cyan-200: #c4f2fe;
+  --cyan-300: #adeffe;
+  --cyan-500: #33adc1;
+  --blue-600: #2f54eb;
+
+  /* yellow */
+  --yellow-100: #fef1db;
+  --yellow-200: #feeccc;
+  --yellow-300: #ffb92e;
+  --yellow-400: #ffd62c;
+
+  /* pink / red */
+  --pink-100: #fff4f6;
+  --pink-200: #ffdae0;
+  --pink-300: #ffcbd3;
+  --pink-500: #ff648d;
+  --pink-600: #ea2f69;
+  --red-600: #c60000;
+
+  /* beige extra */
+  --beige-extra: #efbfb4;
+
+  /* purple */
+  --purple-500: #9747ff;
+
+  /* ================= TYPOGRAPHY ================= */
+
+  --font-size-2xs: 10px;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 36px;
+  --font-size-5xl: 40px;
+  --font-size-6xl: 48px;
+  --font-size-7xl: 56px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  min-width: 335px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Styles for tablet */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Styles for desktop */
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
   }
 }

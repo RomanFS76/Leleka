@@ -1,0 +1,67 @@
+/* src/components/Button.module.css */
+.button {
+  display: inline-flex;
+  font: inherit;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: none;
+  border-bottom: 4px solid var(--btn-border, transparent);
+  border-radius: 100px;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.1s ease,
+    opacity 0.2s ease;
+}
+
+/* variants */
+.primary {
+  background-color: var(--pink-200);
+  --btn-border: var(--pink-300);
+}
+
+.secondary {
+  background-color: var(--gray-200);
+  --btn-border: var(--gray-450);
+}
+
+/* hover / focus */
+.primary:hover,
+.primary:focus-visible {
+  background-color: var(--white);
+  --btn-border: var(--gray-450);
+}
+
+.secondary:hover,
+.secondary:focus-visible {
+  background-color: var(--pink-100);
+  --btn-border: var(--gray-450);
+}
+
+/* active */
+
+.primary:active {
+  background-color: var(--gray-500);
+  border: none;
+}
+
+.secondary:active {
+  background-color: var(--pink-300);
+  border: none;
+}
+
+/* disabled */
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.primary:disabled {
+  background-color: var(--pink-100);
+}
+
+.secondary:disabled {
+  background-color: var(--gray-50);
+}
