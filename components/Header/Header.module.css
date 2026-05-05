@@ -1,0 +1,32 @@
+.header {
+  max-width: 375px;
+  height: 68px;
+  padding: 16px 20px;
+  margin: 0 auto;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Styles for tablet */
+@media only screen and (min-width: 768px) {
+  .header {
+    max-width: 768px;
+  }
+}
+
+/* Styles for desktop */
+@media only screen and (min-width: 1440px) {
+  .header {
+    display: none;
+  }
+}
