@@ -4,7 +4,7 @@ import 'modern-normalize/modern-normalize.css';
 import './globals.css';
 import SideBar from '@/components/SideBar/SideBar';
 import Header from '@/components/Header/Header';
-import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
+// import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className={`${lato.variable} ${comfortaa.variable}`}>
         <SideBar />
         <Header />
-        <Breadcrumbs />
+        {/* <Breadcrumbs /> */}
         {children}
       </body>
     </html>

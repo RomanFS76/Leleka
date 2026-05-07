@@ -1,1 +1,70 @@
- 
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+  background-color: var(--sidebar-bcg);
+
+  
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sideBar {
+  width: 300px;
+  height: 900px;
+
+  font-size: var(--font-size-sm);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  transform: translateX(-100%);
+  transition: transform 500ms ease;
+
+  background-color: white;
+}
+.sideBarOpen {
+  transform: translateX(0);
+}
+
+.header {
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.headerLink {
+  width: 95px;
+  height: 30px;
+  gap: 5px;
+  justify-content: start;
+}
+
+.listLink {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+}
+
+.active {
+  border-radius: 8px;
+
+  background-color: var(--pink-100);
+}

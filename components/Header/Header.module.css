@@ -17,6 +17,12 @@
   gap: 4px;
 }
 
+.btn {
+  z-index: 50;
+}
+
+
+
 /* Styles for tablet */
 @media only screen and (min-width: 768px) {
   .header {
