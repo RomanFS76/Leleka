@@ -5,10 +5,10 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 250ms ease;
-  background-color: var(--sidebar-bcg);
-
-  
+  background-color: var(--sidebar-bcg);  
 }
+
+
 
 .overlayOpen {
   opacity: 1;
@@ -16,7 +16,8 @@
 }
 
 .sideBar {
-  width: 300px;
+  width: calc(100vw - 75px);
+  max-width: 300px;
   height: 900px;
 
   font-size: var(--font-size-sm);
@@ -31,6 +32,7 @@
 
   background-color: white;
 }
+
 .sideBarOpen {
   transform: translateX(0);
 }
@@ -67,4 +69,19 @@
   border-radius: 8px;
 
   background-color: var(--pink-100);
+}
+
+/* Styles for tablet */
+@media only screen and (min-width: 768px) {
+  .overlay {
+    background-color: var(--sidebar-tab-bcg); 
+  }
+}
+
+/* Styles for desktop */
+@media only screen and (min-width: 1440px) {
+  .sideBar {
+    transform: none;
+    transition: none;
+  }
 }
