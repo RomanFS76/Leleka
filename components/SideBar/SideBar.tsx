@@ -5,33 +5,8 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import { useSidebarStore } from '@/lib/store/sidebarStore';
 import { usePathname } from 'next/navigation';
+import { navLinks } from '@/config/navigation';
 
-const navLinks = [
-  {
-    label: 'Мій день',
-    href: '/',
-    ariaLabel: 'Перейти на сторінку Мій день',
-    icon: 'icon-today',
-  },
-  {
-    label: 'Подорож',
-    href: '/travel',
-    ariaLabel: 'Перейти на сторінку Подорож',
-    icon: 'icon-travel',
-  },
-  {
-    label: 'Щоденник',
-    href: '/diary',
-    ariaLabel: 'Перейти на сторінку Щоденник',
-    icon: 'icon-diary',
-  },
-  {
-    label: 'Профіль',
-    href: '/profile',
-    ariaLabel: 'Перейти на сторінку Профіль',
-    icon: 'icon-profile',
-  },
-];
 
 const SideBar = () => {
   const pathname = usePathname();
@@ -62,7 +37,7 @@ const SideBar = () => {
             <Image src="/img/logo.svg" width={30} height={30} alt="logo" />
             <Image src="/img/Лелека.svg" width={60} height={13} alt="logo" />
           </Link>
-          <button type="button" className={clsx('btn flex')} onClick={close}>
+          <button type="button" className={clsx('btn flex',css.btn)} onClick={close}>
             <Image
               src="/img/closeBtnBurger.svg"
               width={18}

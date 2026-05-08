@@ -5,10 +5,8 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 250ms ease;
-  background-color: var(--sidebar-bcg);  
+  background-color: var(--sidebar-bcg);
 }
-
-
 
 .overlayOpen {
   opacity: 1;
@@ -18,7 +16,7 @@
 .sideBar {
   width: calc(100vw - 75px);
   max-width: 300px;
-  height: 900px;
+  height: 100vh;
 
   font-size: var(--font-size-sm);
 
@@ -74,7 +72,7 @@
 /* Styles for tablet */
 @media only screen and (min-width: 768px) {
   .overlay {
-    background-color: var(--sidebar-tab-bcg); 
+    background-color: var(--sidebar-tab-bcg);
   }
 }
 
@@ -83,5 +81,10 @@
   .sideBar {
     transform: none;
     transition: none;
+    font-size: var(--font-size-md); 
+  }
+  .overlay,
+  .btn {
+    display: none;
   }
 }

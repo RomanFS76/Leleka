@@ -42,7 +42,7 @@
   --purple-500: #9747ff;
 
   --sidebar-bcg: #808080;
-  --sidebar-tab-bcg:#5B5B59;
+  --sidebar-tab-bcg: #5b5b59;
 
   /* ================= TYPOGRAPHY ================= */
 
@@ -58,22 +58,22 @@
   --font-size-5xl: 40px;
   --font-size-6xl: 48px;
   --font-size-7xl: 56px;
-
-  --primary-font: var(--font-lato);
 }
 
 body {
+  --primary-font: var(--font-lato);
+  --secondary-font: var(--font-comfortaa);
+
   min-height: 100vh;
   background: var(--white);
   color: var(--black);
-  font-family: var(--font-lato);
+  font-family: var(--primary-font);
   line-height: 1.5;
 }
 
 p {
   margin: 0;
   padding: 0;
-  font: inherit;
 }
 
 a {
@@ -97,6 +97,17 @@ ol {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .btn {
   padding: 0;
   border: none;
@@ -110,6 +121,8 @@ ol {
   align-items: center;
   justify-content: center;
 }
+
+
 
 .container {
   min-width: 335px;

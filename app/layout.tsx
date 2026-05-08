@@ -1,24 +1,23 @@
 // import type { Metadata } from 'next';
-import { Lato, Comfortaa} from 'next/font/google';
+import { Lato, Comfortaa } from 'next/font/google';
 import 'modern-normalize/modern-normalize.css';
 import './globals.css';
 import SideBar from '@/components/SideBar/SideBar';
 import Header from '@/components/Header/Header';
-// import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
+import clsx from 'clsx';
 
 const lato = Lato({
   subsets: ['latin'],
-  weight: ["100", "300", "400", "700", "900"],
+  weight: ['100', '300', '400', '700', '900'],
   variable: '--font-lato',
 });
 
-const comfortaa  = Comfortaa ({
+const comfortaa = Comfortaa({
   subsets: ['latin'],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ['300', '400', '500', '600', '700'],
   variable: '--font-comfortaa',
 });
-
-
 
 // export const metadata: Metadata = {
 //   title: 'Create Next App',
@@ -32,11 +31,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.variable} ${comfortaa.variable}`}>
+      <body className={clsx('grid', lato.variable, comfortaa.variable)}>
         <SideBar />
-        <Header />
-        {/* <Breadcrumbs /> */}
-        {children}
+        <div className="page ">
+          <Header />
+          <Breadcrumbs />
+          {children}
+        </div>
       </body>
     </html>
   );
