@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
- 
+
   font-size: var(--font-size-xs);
   line-height: 1.6;
 }
@@ -38,5 +38,11 @@
 @media only screen and (min-width: 768px) {
   .breadcrumbs {
     max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .breadcrumbs {
+    max-width: 100%; 
   }
 }

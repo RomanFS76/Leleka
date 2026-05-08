@@ -79,9 +79,15 @@
 /* Styles for desktop */
 @media only screen and (min-width: 1440px) {
   .sideBar {
+    width: 312px;
+    max-width:none;
+    position: sticky;
+    top: 0;
+    left: auto;
+    z-index: auto;
     transform: none;
     transition: none;
-    font-size: var(--font-size-md); 
+    font-size: var(--font-size-md);
   }
   .overlay,
   .btn {
