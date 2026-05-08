@@ -6,6 +6,7 @@ import SideBar from '@/components/SideBar/SideBar';
 import Header from '@/components/Header/Header';
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import clsx from 'clsx';
+import GreetingBlock from '@/components/GreetingBlock/GreetingBlock';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -36,6 +37,7 @@ export default function RootLayout({
         <div className="page ">
           <Header />
           <Breadcrumbs />
+          <GreetingBlock/>
           {children}
         </div>
       </body>

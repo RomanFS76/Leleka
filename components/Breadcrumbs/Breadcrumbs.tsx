@@ -22,8 +22,7 @@ const Breadcrumbs = () => {
         <Link href={currentLink?.href || '/'} className={css.currentLink}>
           {currentLink?.label || 'Лелека'}
         </Link>
-      </div>
-      <h1 className={css.pageTitle}>Доброго ранку, Ганно!</h1>
+      </div>      
     </section>
   );
 };
