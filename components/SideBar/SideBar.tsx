@@ -7,6 +7,7 @@ import { useSidebarStore } from '@/lib/store/sidebarStore';
 import { usePathname } from 'next/navigation';
 import { navLinks } from '@/config/navigation';
 import { useEffect } from 'react';
+import AuthBar from '../AuthBar/AuthBar';
 
 const SideBar = () => {
   const pathname = usePathname();
@@ -63,7 +64,7 @@ const SideBar = () => {
             />
           </button>
         </div>
-        <div>
+        <div className={clsx(css.navSection)}>
           <ul className={clsx(css.listLink)}>
             {navLinks.map(link => (
               <li
@@ -85,6 +86,7 @@ const SideBar = () => {
               </li>
             ))}
           </ul>
+          <AuthBar />
         </div>
       </aside>
     </>
