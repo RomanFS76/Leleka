@@ -121,16 +121,21 @@ p {
   align-items: center;
   justify-content: center;
 }
-
-
-
-
 .container {
   min-width: 335px;
   max-width: 375px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
+  /* ================= Layout ================= */
+  .overlayIntro{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 32px 0;
+  }
+
 
 /* Styles for tablet */
 @media only screen and (min-width: 768px) {

@@ -36,8 +36,10 @@ export default function RootLayout({
         <SideBar />
         <div className="page ">
           <Header />
-          <Breadcrumbs />
-          <GreetingBlock/>
+          <div className="overlayIntro">
+            <Breadcrumbs />
+            <GreetingBlock />
+          </div>
           {children}
         </div>
       </body>
