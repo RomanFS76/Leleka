@@ -8,11 +8,15 @@ import { usePathname } from 'next/navigation';
 import { navLinks } from '@/config/navigation';
 import { useEffect } from 'react';
 import AuthBar from '../AuthBar/AuthBar';
+import { useAuthStore } from '@/lib/store/user';
+import UserBar from '../UserBar/UserBar';
 
 const SideBar = () => {
   const pathname = usePathname();
   const isOpen = useSidebarStore(state => state.isOpen);
   const close = useSidebarStore(state => state.close);
+
+  const isAuth = useAuthStore(state => state.isAuthenticated);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -86,7 +90,7 @@ const SideBar = () => {
               </li>
             ))}
           </ul>
-          <AuthBar />
+          <div className={css.overlayAuth}>{isAuth ? <AuthBar /> : <UserBar />}</div>
         </div>
       </aside>
     </>

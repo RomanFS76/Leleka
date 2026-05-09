@@ -1,0 +1,13 @@
+.userBar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+
+}
+
+.btn {
+  line-height: 1.6;
+}

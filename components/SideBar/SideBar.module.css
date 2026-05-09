@@ -80,6 +80,12 @@
   background-color: var(--pink-100);
 }
 
+.overlayAuth{
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-450);
+    font-weight: 700;
+}
+
 /* Styles for tablet */
 @media only screen and (min-width: 768px) {
   .overlay {
