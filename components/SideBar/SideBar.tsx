@@ -6,12 +6,26 @@ import clsx from 'clsx';
 import { useSidebarStore } from '@/lib/store/sidebarStore';
 import { usePathname } from 'next/navigation';
 import { navLinks } from '@/config/navigation';
-
+import { useEffect } from 'react';
 
 const SideBar = () => {
   const pathname = usePathname();
   const isOpen = useSidebarStore(state => state.isOpen);
   const close = useSidebarStore(state => state.close);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        close();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [close]);
 
   return (
     <>
@@ -32,12 +46,15 @@ const SideBar = () => {
             className={clsx(css.headerLink, 'flex')}
             href="/"
             aria-label="Leleka"
-            onClick={close}
           >
             <Image src="/img/logo.svg" width={30} height={30} alt="logo" />
             <Image src="/img/Лелека.svg" width={60} height={13} alt="logo" />
           </Link>
-          <button type="button" className={clsx('btn flex',css.btn)} onClick={close}>
+          <button
+            type="button"
+            className={clsx('btn flex', css.btn)}
+            onClick={close}
+          >
             <Image
               src="/img/closeBtnBurger.svg"
               width={18}
