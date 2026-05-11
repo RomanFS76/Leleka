@@ -1,12 +1,17 @@
 import clsx from 'clsx';
 import css from './UserBar.module.css';
 import Button from '../shared/Button/Button';
+import Link from 'next/link';
 
 const UserBar = () => {
   return (
     <div className={clsx(css.userBar)}>
-      <Button variant="primary" text="Зареєстуватись" />
-      <Button variant="secondary" text="Увійти" />
+      <Button as={Link} href="/auth/register">
+        Зареєструватись
+      </Button>
+      <Button as={Link} href="/auth/login" variant="secondary">
+        Увійти
+      </Button>
     </div>
   );
 };
